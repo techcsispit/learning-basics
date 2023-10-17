@@ -59,8 +59,25 @@ By contributing to this repository, you're helping fellow programmers learn and 
 
 If you have any questions or need clarification, feel free to reach out through issues or discussions.
 
-## Acknowledgments
+## Issues
 
-Thank you for visiting the LearningBasics! I hope you find the code snippets helpful in your own coding journey. Remember, programming is all about exploration and learning, so have fun and keep coding!
+You can contribute in the following ways:
 
----
+- **Bug fixes**: Look for open issues labeled as "bug" and provide fixes.
+- **Feature implementation**: Implement new features and functionalities.
+- **Documentation**: Improve the project's documentation.
+- **Code reviews**: Help review pull requests from other contributors.
+- **Testing**: Write or improve test cases to ensure code reliability.
+- **Refactoring**: Enhance the codebase by making it more maintainable and efficient.
+
+When you contribute, please make sure to follow the project's coding standards and conventions. If you have questions or need help, feel free to ask in the project's issues or discussions.
+
+## Code of Conduct
+
+Please note that this project has a Code of Conduct. Be respectful, considerate, and constructive in all your interactions within this community.
+
+## Get Involved
+
+Join the **Source Start** event and start contributing today! This is a great opportunity to learn, collaborate, and make a positive impact on open source projects. We welcome your contributions and look forward to working with you.
+
+Happy coding! 🚀
