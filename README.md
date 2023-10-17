@@ -31,7 +31,7 @@ You're welcome to use the code snippets for your own learning, experimentation, 
 
 ## Contribution
 
-Since this repository is a personal learning space, I'm not actively seeking contributions. However, if you spot any errors or have suggestions for improvement, please feel free to open an issue or send a pull request.
+Since this repository is a personal learning space, I'm actively seeking contributions in terms of new data structures, any error corrections etc. However, if you spot any errors or have suggestions for improvement, please feel free to open an issue or send a pull request.
 
 ## Acknowledgments
 
