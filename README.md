@@ -6,10 +6,10 @@ Welcome to the **LearningBasics**! This repository serves as a collection of bas
 
 This repository contains code snippets for the following languages:
 
-- Python
-- Java
-- C
-- C++
+- ![](https://img.shields.io/badge/Python-FFD43B?style=for-the-badge&logo=python&logoColor=blue)
+- ![](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
+- ![](https://img.shields.io/badge/C-00599C?style=for-the-badge&logo=c&logoColor=white)
+- ![](https://img.shields.io/badge/C%2B%2B-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
 
 ## Structure
 
