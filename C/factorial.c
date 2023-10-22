@@ -11,7 +11,7 @@ fact (int num)
 	  k = k * (n);
 
 	}
-      printf ("factorial is %d \n", k);
+      printf ("factorial of number is is %d \n", k);
     }
   else
     printf ("error");
