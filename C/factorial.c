@@ -1,23 +1,31 @@
-#include <stdio.h>
+#include<stdio.h>
+void
+fact (int num)
+{
+  int k = 1;
 
-int fact(int n){
-	if (n==2){
-		return 2;
-	}else if(n==1 || n==0){
-		return 1;
-	}else if(n<0){
-		return 0;
-	}else{
-		return n*fact(n-1);
+  if (num > -1)
+    {
+      for (int n = 1; n <= num; n++)
+	{
+	  k = k * (n);
+
 	}
+      printf ("factorial is %d \n", k);
+    }
+  else
+    printf ("error");
+
+
+
 }
 
-int main() {
-    int n;
-    printf("Enter N: ");
-    scanf("%d", &n);
-    int ans = fact(n);
-    printf("==> %dth Factorial: %d\n", n, ans);
-	printf("hello");
-    return 0;
+int
+main ()
+{
+  int num;
+  printf ("Enter number for factorial \n");
+  scanf ("%d", &num);
+  fact (num);
+ return 0;
 }
