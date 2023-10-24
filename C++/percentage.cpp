@@ -2,26 +2,28 @@
 
 using namespace std;
 
-int main ()
-{
-	cout<<"Enter your name: ";
-	string Name;
-	cin>>Name;
+int main() {
+  
+  string name;
+  int a, b, c;
+  double percentage;
 
-	cout<<"Enter your Mathematics marks: "<<endl;
-	int a;
-	cin>> a;
+ 
+  cout << "Enter your name: ";
+  cin >> name;
 
-	cout<<"Enter your Physics marks: "<<endl;
-	int b;
-	cin>> b;
+  cout << "Enter your Mathematics marks: ";
+  cin >> a;
 
-	cout<<"Enter your Chemistry marks: "<<endl;
-	int c;
-	cin>> c;
+  cout << "Enter your Physics marks: ";
+  cin >> b;
 
-	double Percentage;
-	Percentage=(a+b+c)/3;
+  cout << "Enter your Chemistry marks: ";
+  cin >> c;
 
-	cout<<Name<<" Your Percentage is "<<Percentage<<"%";
+  percentage = (a + b + c) / 3.0;
+
+  cout << name << " Your Percentage is " << percentage << "%";
+
+  return 0;
 }
