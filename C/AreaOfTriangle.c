@@ -1,14 +1,18 @@
-#include <stdio.h>
-// Area of Triangle
-int main(){
-    float b, h;
-    printf("Enter the Base of the Triangle: ");
-    scanf("%f", &b);
-    printf("Enter the Height of the Triangle: ");
-    scanf("%f", &h);
-    if (l < 0 || b < 0) {
-    printf("Invalid input. The Height and Base must be non-negative values.\n");
-    return 1;
-  }
-    printf("The Area of the Triangle is %f", 0.5*b*h);
-}
+#include<stdio.h>
+#include<math.h>
+int main ()
+{
+    float a,b,c,s,ar;
+    printf("Enter 3 sides \n");
+    scanf("%f",&a);
+    scanf("%f",&b);
+    scanf("%f",&c);
+    if(a<0||b<0||c<0)
+    printf("Invalid input for side of a triangle");
+    else{
+    s=(a+b+c)/2;
+    ar=sqrt(s*(s-a)*(s-b)*(s-c));
+    printf("Area = %f",ar);
+    }
+    return 0;
+}}
