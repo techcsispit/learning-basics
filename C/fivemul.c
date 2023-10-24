@@ -1,10 +1,11 @@
 #include <stdio.h>
 
-int five(int n){
+void five(int n){
 	if(n>0){
-		printf("%d\t", n);
-		five(n-5);
+		return;
 	}
+	printf("%d\t", n);
+		five(n-5);
 	printf("%d\t", n);	
 }
 int main(){
