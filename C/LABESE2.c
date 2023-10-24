@@ -16,15 +16,17 @@ int main(){
     
     order arr[n];
     for(int i = 0; i<n; i++){
-        printf("Enter Price/Quantity for %d item: ", i+1);
-        scanf("%d/%d", &arr[i].price, &arr[i].quantity);
+        printf("Enter Price for %d item: ", i+1);
+        scanf("%d", &arr[i].price);
+        printf("Enter Quantity for %d item: ", i+1);
+        scanf("%d", &arr[i].quantity);
     }
 
-    int billprice=0;
+    float billprice=0;
     for(int i = 0; i<n; i++){
         billprice += arr[i].price*arr[i].quantity;
     }
     
     billprice*=1.1;
-    printf("Final Bill: %d", billprice);
+    printf("Final Bill: %3.2f", billprice);
 }
