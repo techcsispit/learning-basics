@@ -1,31 +1,24 @@
 #include<stdio.h>
-void
-fact (int num)
-{
-  int k = 1;
 
-  if (num > -1)
-    {
-      for (int n = 1; n <= num; n++)
-	{
-	  k = k * (n);
-
-	}
-      printf ("factorial of number is is %d \n", k);
-    }
-  else
-    printf ("error");
-
-
-
+int fact(int num);
+int fact (int num){
+  if(num<=1){
+    return 1;
+  } else {
+    return num*fact(num-1);
+  }
 }
 
-int
-main ()
+int main ()
 {
   int num;
   printf ("Enter number for factorial \n");
   scanf ("%d", &num);
-  fact (num);
- return 0;
+  if(num>=0){
+    int f= fact (num);
+    printf("Factorial is: %d",f);
+  } else {
+    printf("Factorial of a negative number does not exist");
+  }
+  return 0;
 }

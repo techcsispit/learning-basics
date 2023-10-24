@@ -12,7 +12,14 @@ int aliquot(int n){
 			sum+=i;
 		}
 	}
-	
+	// Changes made
+	int sum2=1, lim2 = sum/2;
+	for(int i = 2; i<=lim2; i++){
+		if(sum%i==0){
+			sum2+=i;
+		}
+	}
+	// Changes made
 	//break case
 	if(n==1){
 		sum = 0;
@@ -20,11 +27,19 @@ int aliquot(int n){
 		return 0;
 	}
 	
+	
 	//recursive block
 	if(sum == n){
 		printf("==> %d is a Perfect Number\n", n);
 		return 0;
-	}else if(sum!=0){
+	}
+	// Changes made
+	else if(n==sum2){
+	    printf("==> %d is a Amicable Number\n", n);
+		return 0;
+	}
+	// Changes made
+	else if(sum!=0){
 		print(n, sum);
 		aliquot(sum);
 	
@@ -38,6 +53,3 @@ int main(){
 	aliquot(n);
 }
 // ADD SOME CONDITION FOR AMICABLE
-
-
-
