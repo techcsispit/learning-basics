@@ -1,4 +1,5 @@
 #include<stdio.h>
+
 int fact(int num);
 int fact (int num){
   if(num<=1){
