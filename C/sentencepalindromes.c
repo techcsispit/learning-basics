@@ -1,43 +1,27 @@
 #include <stdio.h>
-int main()
-{
-    char str[100], array[10][30];
-    int i = 0, j = 0, k = 0, len1 = 0;
+#include<string.h>
+
+int main(){
+    char str[100];
+    int i = 0, j = 0;
     printf("Enter the string: \n");
     scanf("%[^\n]", str);
 
-    for (i = 0; str[i] != '\0'; i++)
-    {
-        if (str[i] == ' ')
-        {
-            array[k][j] = '\0';
-            k++;
-            j = 0;
+     j = strlen(str);
+     if(str[j-1]==' '){
+         j--;
+     }
+    
+    int q = (j-1);
+    for(int p=0; p<j; p++){
+        if(str[p]!=str[q]){
+            printf("Not palindrome");
+            return 0;
         }
-        else
-        {
-            array[k][j] = str[i];
-            j++;
+        else{
+            q--;
         }
     }
-    array[k][j] = '\0';
-
-    // Palindrome check
-    for (i = 0; i <= k; i++)
-    {
-        len1 = strlen(array[i]);
-        int j = 0;
-        while (j < len1 / 2)
-        {
-            if (tolower(array[i][j]) != tolower(array[i][len1 - j - 1]))
-            {
-                break;
-            }
-            j++;
-        }
-        if (j == len1 / 2)
-            printf("%s ", array[i]);
-    }
-    printf("\n");
+    printf("Palindrome");
     return 0;
 }
