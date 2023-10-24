@@ -1,27 +1,26 @@
 # include <stdio.h>
 
 void pattern(int n){
-	n/=2;
-	for(int x = -n; x<=n; x++){
-		if (x == 0){
-			continue;
-		}
-		printf("\n");
-		for(int y = -n; y<=n; y++){
-			if (y-x>n || x+y>n || x-y>n || -x-y>n){
-				printf(" * ");
-			}else if(y == 0){
-				printf("");
-			}
-			
-			else{
-				printf("   ");
-			}
-		}
+	for(int i=0; i<(n); i++){
+	    for(int j=0; j<(n); j++){
+	        if(i==0 || i==(n-1)){
+	            printf("* ");
+	        }
+	        else{
+	            if(j==0 || j==(n-1)){
+	               printf("* "); 
+	            }
+	            else{
+	                printf("  ");
+	            }
+	        }
+	    }
+	    printf("\n");
 	}
 }
 
 int main(){
+    printf("Program to draw square of given side\n");
 	int n;
 	printf("Enter N: ");
 	scanf("%d", &n);
