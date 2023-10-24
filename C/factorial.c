@@ -15,17 +15,18 @@ fact (int num)
     }
   else
     printf ("error");
-
-
-
 }
-
 int
 main ()
 {
   int num;
   printf ("Enter number for factorial \n");
   scanf ("%d", &num);
-  fact (num);
+ 
+	if(!scanf("%d",&num)){
+		printf("error\n");
+		return 1;
+	}
+	 fact (num);
  return 0;
 }
