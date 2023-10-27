@@ -27,7 +27,7 @@ public class JButton_demo implements ActionListener {
     }
 
     public static void main(String[] args) {
-        JButton_demo g=new JButton_demo(); 
+        JButton_demo ob=new JButton_demo(); 
         frame=new JFrame();
         label=new JLabel();
         panel=new JPanel(); //Creating a new JPanel
@@ -40,7 +40,7 @@ public class JButton_demo implements ActionListener {
 
         button.setBounds(0,0,200,100);
         button.setText("First button");
-        button.addActionListener(g); //This action listener is reposible to execute any action when button is clicked
+        button.addActionListener(ob); //This action listener is reposible to execute any action when button is clicked
         button.setFont(new Font("Adobe Caslon pro",Font.ITALIC,16));
         button.setFocusable(false);
         button.setBackground(Color.GREEN);
