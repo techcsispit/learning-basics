@@ -1,30 +1,38 @@
-
+// Parent class A1
 class A1 {
+    // Method in class A1
     public void show(){
         System.out.println("in A");
     }
 }
 
-class B extends A1{
+// Child class B
+class B extends A1 {
+    // Overriding method in class B
     public void show(){
         System.out.println("in B");
     }
 }
 
-class C extends A1{
+// Child class C
+class C extends A1 {
+    // Overriding method in class C
     public void show(){
         System.out.println("in C");
     }
 }
 
+
 public class OverridingMethod {
     public static void main(String[] args) {
-//compile time and runtime
-        A1 obj = new B(); //Runtime polymorphism
-        obj.show();//which show methd to call will be decided at runtime only
+        // Runtime polymorphism - Creating object of class B using reference of class A1
+        A1 obj = new B();
+        // Method invocation - Resolved at runtime
+        obj.show(); // which show method to call will be decided at runtime only
 
-        //we are calling it dym meth disp because it changes on changing the object
-         obj =new C(); //dynamic method dispatch [ Inorder to achieve this we need Runtime polymorphism
-        obj.show();
+        // Dynamic method dispatch - Changing the reference to class C
+        obj = new C();
+        // Method invocation - Changes with the object to which the reference is pointing
+        obj.show(); // dynamic method dispatch [ In order to achieve this we need Runtime polymorphism
     }
 }
