@@ -1,19 +1,21 @@
 #include <stdio.h>
 
 int prime(int n){
-	int d = 3;
-	for (d; d<=n/2; d+=2){ //checking its divisibility against 3, 5, 7 and so on, till n/2
-		if(n%d==0){
-			return 0;
-		}
-	}
-	return 1;
+    if (n==0 || n==1){
+        return 0;
+    }
+    for (int i=2;i<n/2;i++){
+        if(n%i==0){
+            return 0;
+        }
+    }
+    return 1;
 }
 
 int main(){
 	int a, b;
 	printf("Enter the Range to find twin primes: ");
-	scanf("%d, %d", &a, &b);
+	scanf("%d %d", &a, &b);
 	// making a odd since the twin odds are all consecutive odd nums
 	if (a%2==0){
 		a++;	
@@ -29,4 +31,3 @@ int main(){
 	}
 	printf("are the only twin primes present in this range\n");
 }
-
