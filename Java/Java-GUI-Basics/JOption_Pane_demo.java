@@ -24,7 +24,7 @@ public class JOption_Pane_demo {
         if (a != null) {
             int ch = JOptionPane.showConfirmDialog(null, "ARE YOU READDDDYYY FOR SOURCE START, " + a + " ???", "FIRST DIALOGUEBOX", JOptionPane.YES_NO_CANCEL_OPTION);
             if (ch == 0) {
-                NewWindow ob=new NewWindow();
+                new NewWindow();
             } else if (ch == 1 || ch == 2) {
                 JOptionPane.showMessageDialog(null, "You are done. Thankyou", "Done", JOptionPane.INFORMATION_MESSAGE);
             }
