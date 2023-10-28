@@ -1,4 +1,3 @@
-# MMDDYYYY to <Month><Date><Year> converter
 try:
     date_input = input('Enter date in MMDDYYYY format: ')
     months = {'01': 'January', '02': 'February', '03': 'March',
