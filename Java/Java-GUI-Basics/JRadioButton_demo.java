@@ -2,7 +2,10 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-public class JRadioButton_demo implements ActionListener { //Practice for JRadioButton
+public class JRadioButton_demo implements ActionListener { 
+
+    //JRadioButton- One or more buttons in a grouping in which only one may be selected per group.
+    
     static JFrame frame;
     static JLabel LABEL;
     static JRadioButton jrb1;
@@ -17,12 +20,12 @@ public class JRadioButton_demo implements ActionListener { //Practice for JRadio
         jrb3=new JRadioButton("Mystery emoji 3");
         JRadioButton_demo ob=new JRadioButton_demo();
 
-        ButtonGroup bg=new ButtonGroup();
+        ButtonGroup bg=new ButtonGroup(); //A group of buttons
         bg.add(jrb1);
         bg.add(jrb2);
         bg.add(jrb3);
 
-        jrb1.addActionListener(ob);
+        jrb1.addActionListener(ob); //Adding Actionlistener interface to each button
         jrb2.addActionListener(ob);
         jrb3.addActionListener(ob);
 
@@ -36,7 +39,7 @@ public class JRadioButton_demo implements ActionListener { //Practice for JRadio
     }
 
     @Override
-    public void actionPerformed(ActionEvent e) {
+    public void actionPerformed(ActionEvent e) { //This function is implemented by interface and is called when any of the JRadioButtons is selected
         if(e.getSource()==jrb1){
             LABEL.setBounds(100,100,200,200);
             LABEL.setIcon(new ImageIcon("smiley.png"));
@@ -56,7 +59,7 @@ public class JRadioButton_demo implements ActionListener { //Practice for JRadio
             frame.setVisible(true);
 
         }
-        jrb3.setEnabled(false);
+        jrb3.setEnabled(false); //Once a JRadioButton is clicked, any button within the group cannot be clicked upon again
         jrb2.setEnabled(false);
         jrb1.setEnabled(false);
     }
