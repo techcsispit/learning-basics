@@ -58,6 +58,7 @@ public class BankingSystem{
                 }else if(opt==2){
                     System.out.println("\nEnter the money to be withdrawn: ");
                     double removed = sc.nextDouble();
+                    
                     acc.withdrawmoney(removed);
 
                 }else if(opt==3){
@@ -105,8 +106,12 @@ class BankAcc{
     }
     
     void withdrawmoney(double remove){
+        if(remove>(this.balance))
+                    System.out.println("Insufficient balance!!");
+                    else{
         this.balance -= remove;
         System.out.println(remove + " Rupees withdrawn from your acc."+this.accno);
+                    }
     }
 
     void CI(int t){

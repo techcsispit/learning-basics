@@ -3,15 +3,9 @@
 int main() {
     int a, b, c, r;
     printf("Enter a, b: ");
-    scanf("%d, %d", &a, &b);
+    scanf("%d %d", &a, &b);
     
     int initprod = a*b;
-    //sorting a and b
-    if(b>a){
-        c = a;
-        a = b;
-        b = c;
-    } //sorted
     
     //GCD Euclid Method
     r = a%b;

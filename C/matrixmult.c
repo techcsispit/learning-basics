@@ -1,66 +1,59 @@
 #include <stdio.h>
-
-void elem(int r1,int r2,int c1,int c2){
-    int mat1[r1][c1];
-    int mat2[r2][c2];
-    int mat3[r1][c1];
-    
-    printf("\nenter elements for 1st matrix(like a matrix) \n");
-    for(int i=0;i<r1;i++){
-        for(int j=0;j<c1;j++){
-            scanf("%d",&mat1[i][j]);
-            
-            
-        }
-    }
-     printf("\n enter elements for 2nd matrix(like a matrix) \n");
-    for(int i=0;i<r2;i++){
-        for(int j=0;j<c2;j++){
-            scanf("%d",&mat2[i][j]);
-            
-            
-        }
-    }
-    for(int i=0;i<r1;i++){
-        for(int j=0;j<c2;j++){
-            mat3[i][j]=0;
-        }
-    }
-  
-  if(c1==r2)
+void displayMat(int arr[][10],int r,int c)
 {
-    for(int i=0;i<r1;i++){
-        for(int j=0;j<c2;j++){
-        for(int t=0;t<c1;t++){
-         mat3[i][j]=mat3[i][j]+(mat1[i][t])*(mat2[t][j]);   
+for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            printf("%d ",arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+void readMat(int a[][10],int r,int c)
+{
+    printf("Enter the elements in a row wise format \n");
+for(int i=0;i<r;i++){
+        for(int j=0;j<c;j++){
+            scanf("%d", &a[i][j]);
         }
     }
-    
 }
-printf(" \n product is \n ");
-for(int i=0;i<r1;i++){
-        for(int j=0;j<c1;j++){
-            printf("%d ",mat3[i][j]);
-        }
-        printf("\n");}
-}
-        
+void mul(int a[][10], int b[][10],int r1,int r2,int c1,int c2)
+{
+  int res[r1][c2];
+  printf ("Multiplication of given two matrices is:\n");
+  for (int i = 0; i < r1; i++){
+      for (int j = 0; j < c2; j++){
+    	    res[i][j] = 0;
+    	    for (int k = 0; k < r2; k++){
+    	      res[i][j] += a[i][k] * b[k][j];
+    	    }
+    	    printf ("%d ", res[i][j]);
+    	}
+      printf ("\n");
+    }
 }
 
 
 int main()
-{int r1,r2,c1,c2;
-     printf("enter row and column for 1st");
-    scanf("%d %d",&r1,&c1);
-    printf(" \nenter row and column for 2nd");
-    scanf("%d %d",&r2,&c2);
-if(c1==r2){
-
-    elem( r1, r2, c1, c2);
+{
+    int a[10][10],b[10][10],res[10][10],rows,cols,rows1,cols1;
+    printf("Enter rows of matix less than 10 \n");
+    scanf("%d",&rows);
+    printf("Enter columns of matix less than 10 \n");
+    scanf("%d",&cols);
+    readMat(a,rows,cols);
     
+    printf("Enter rows of matix less than 10 \n");
+    scanf("%d",&rows1);
+    printf("Enter columns of matix less than 10 \n");
+    scanf("%d",&cols1);
+    readMat(b,rows1,cols1);
+    if(cols==rows1){
+        mul(a,b,rows,rows1,cols,cols1);
     }
-else{
-printf("error,cannot multiply the 2 matrices");
+    else {
+        printf("The matrix cannot be multiplied");
+    }
+    return 0;
 }
-    
-}
+
