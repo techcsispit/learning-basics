@@ -71,7 +71,13 @@ int main()
     int n;
     printf("Enter the number of flights\n");
     scanf("%d", &n);
-    struct airline a[n];
+    while(n<=0)
+    {
+        printf("Invalid input please try again\n");
+         printf("Enter the number of flights\n");    //To avoid any invalid input given by the user 
+        scanf("%d", &n);
+    }
+    struct airline a[n];            
     for (int i = 0; i < n; i++)
     {
         a[i] = getinfo(a[i]);
