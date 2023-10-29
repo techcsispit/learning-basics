@@ -4,6 +4,9 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class JComboBox_demo extends JFrame implements ActionListener {
+
+    //JComboBox- A component that combines a button or an editable field into a drop-down menu
+    
     String options[] = {"JButton_demo", "JFrame_demo", "JOption_Pane_demo"};
     //int options[] = {0,1,2};
     JComboBox jcombobox;
@@ -31,7 +34,7 @@ public class JComboBox_demo extends JFrame implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == b) {
-            if ((""+jcombobox.getItemAt(jcombobox.getSelectedIndex())).equalsIgnoreCase("GUI2")) {
+            if ((""+jcombobox.getItemAt(jcombobox.getSelectedIndex())).equalsIgnoreCase("GUI2")) { //This is to extract the selected option from the JComboBox and convert it into a string to compare
                  JButton_demo ob=new JButton_demo();
                 ob.main(new String[]{"", ""});
                 this.dispose();
