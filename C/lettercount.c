@@ -1,50 +1,40 @@
 #include <stdio.h>
 #include <string.h>
-int main()
-{
-    char sent[100];
-    printf("Enter the Sentence: ");
-    scanf("%[^\nc]", sent);
-    int len = strlen(sent);
-    int vowels = 0, consonants = 0, special = 0, spaces = 0, charcount = 0;
-    for (int i = 0; i < len; i++)
-    {
-        charcount++;
-        if (sent[i] == 'a' || sent[i] == 'A' || sent[i] == 'e' || sent[i] == 'E' || sent[i] == 'i' || sent[i] == 'I' || sent[i] == 'o' || sent[i] == 'O' || sent[i] == 'u' || sent[i] == 'U')
-        {
-            vowels++;
-        }
-        else if ((sent[i] >= 'a' && sent[i] <= 'z') || (sent[i] >= 'A' && sent[i] <= 'Z'))
-        {
-            consonants++;
-        }
-        else if (sent[i] == ' ' || sent[i] == '\t')
-        {
-            spaces++;
-        }
-        else
-        {
-            special++;
-        }
-    }
-    printf("Vowels: %d\nConsonants: %d\nSpecials: %d\n", vowels, consonants, special);
-    printf("Spaces: %d\nTotal Characters: %d\n", spaces, charcount - spaces);
 
-    // Word Count
-    int wordcount=0;
-    for (int i = 0; i < len; i++)
-    {
-        if (sent[i] == ' ')
-        {
-            while (sent[i] == ' ')
-                i++;
-            if (i < len)
-                wordcount++;
-        }
+int main() {
+  char sent[100];
+  printf("Enter the Sentence: ");
+  scanf("%[^\n]s", sent);
+
+  int vowels = 0, consonants = 0, special = 0, spaces = 0, words = 0;
+  int is_vowel = 0;
+  int is_space = 0;
+
+  for (int i = 0; i < strlen(sent); i++) {
+    is_vowel = (sent[i] == 'a' || sent[i] == 'e' || sent[i] == 'i' || sent[i] == 'o' || sent[i] == 'u' || sent[i] == 'A' || sent[i] == 'E' || sent[i] == 'I' || sent[i] == 'O' || sent[i] == 'U');
+
+    is_space = (sent[i] == ' ');
+
+    if (is_vowel) {
+      vowels++;
+    } else if (is_space) {
+      spaces++;
+    } else if (sent[i] >= 'a' && sent[i] <= 'z' || sent[i] >= 'A' && sent[i] <= 'Z') {
+      consonants++;
+    } else {
+      special++;
     }
 
-    if (sent[0] != ' ')
-        wordcount++;
-    printf("Words: %d\n", wordcount);
-    return 0;
+    if (is_vowel || sent[i] >= 'a' && sent[i] <= 'z' || sent[i] >= 'A' && sent[i] <= 'Z') {
+      if (!is_space && !is_vowel) {
+        words++;
+      }
+    } else {
+      is_space = 0;
+    }
+  }
+
+  printf("Vowels: %d\nConsonants: %d\nSpecials: %d\nSpaces: %d\nWords: %d\n", vowels, consonants, special, spaces, words);
+
+  return 0;
 }

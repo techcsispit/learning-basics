@@ -8,7 +8,11 @@ Hello!
   6] JOption_Pane_demo.java
   7] JTextField_demo.java
   8] JRadioButton_demo.java 
+  9] JComboBox_demo.java
 
+Java swing is Java's very own UI building package using which one can create their very own applications and decorate them with details as per their desires!
+The above classes are for reference and implement some of the most commonly used UI tools/components and this folder is also backed by a project which is a very own
+custom-built GUI implement Java Swing features.
 
 
 

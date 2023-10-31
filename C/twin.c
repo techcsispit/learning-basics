@@ -1,12 +1,15 @@
 #include <stdio.h>
-int prime(int n)
-{
-	for (int d=3; d<=n/2; d+=2){ //checking its divisibility against 3, 5, 7 and so on, till n/2
-		if(n%d==0){
-			return 0;
-		}
-	}
-	return 1;
+
+int prime(int n){
+    if (n==0 || n==1){
+        return 0;
+    }
+    for (int i=2;i<n/2;i++){
+        if(n%i==0){
+            return 0;
+        }
+    }
+    return 1;
 }
 
 int main()
@@ -15,6 +18,7 @@ int main()
 	printf("Enter the Range to find twin primes: ");
 	scanf("%d",&a);
 	scanf("%d",&b);
+
 	// making a odd since the twin odds are all consecutive odd nums
 	if (a%2==0){
 		a++;	
